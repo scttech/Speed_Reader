@@ -15,6 +15,7 @@ import com.scttech.android.kotlin.speedreader.ui.practice.PracticeRoute
 import com.scttech.android.kotlin.speedreader.ui.progress.ProgressRoute
 import com.scttech.android.kotlin.speedreader.ui.scan.ScanRoute
 import com.scttech.android.kotlin.speedreader.ui.settings.SettingsRoute
+import com.scttech.android.kotlin.speedreader.ui.tips.TipsScreen
 
 object Routes {
     const val HOME = "home"
@@ -24,6 +25,7 @@ object Routes {
     const val DRILLS = "drills"
     const val SCAN = "scan"
     const val PROGRESS = "progress"
+    const val TIPS = "tips"
     const val DRILL_SPAN = "drill_span"
     const val DRILL_PACED = "drill_paced/{kind}"
 }
@@ -40,6 +42,7 @@ fun AppNavHost() {
                 onStartDrills = { navController.navigate(Routes.DRILLS) },
                 onStartScan = { navController.navigate(Routes.SCAN) },
                 onOpenProgress = { navController.navigate(Routes.PROGRESS) },
+                onOpenTips = { navController.navigate(Routes.TIPS) },
             )
         }
         composable(Routes.BASELINE) {
@@ -47,6 +50,9 @@ fun AppNavHost() {
         }
         composable(Routes.SCAN) {
             ScanRoute(onBack = { navController.popBackStack() })
+        }
+        composable(Routes.TIPS) {
+            TipsScreen(onBack = { navController.popBackStack() })
         }
         composable(Routes.PROGRESS) {
             ProgressRoute(onBack = { navController.popBackStack() })

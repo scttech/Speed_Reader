@@ -53,6 +53,20 @@ The app has an adaptive launcher icon with a themed (monochrome) variant.
 
 > The screenshots show sample data seeded into an emulator, not real results.
 
+## Getting the most out of the app
+- **Comprehension comes first.** Only effective WPM counts (speed x comprehension). If you're guessing the quiz answers, slow down.
+- **Practise a little every day.** Ten to fifteen minutes daily beats one long session a week. Turn on the daily reminder in Settings and protect your streak.
+- **Do a drill before you read.** Warm up with Span stretch or a Column drill, then do a practice reading.
+- **Follow the pacer, don't chase it.** Keep your eyes on the highlight and resist going back over words. Rereading costs the most time.
+- **Quieten your inner voice.** Hum or tap a finger while you read, and aim to take in whole phrases rather than single words.
+- **Let the target adapt.** It rises at 80% comprehension or better and falls below 60%. Staying in the middle means you're in the right zone.
+- **Use Metronome ramp to stretch.** Go past your comfort point, then return to practice reading and it will feel slower.
+- **Treat Skim & scan as a separate skill.** Sweep for keywords when you need one fact, rather than reading every line.
+- **Read in good conditions.** Good light, a steady phone, no notifications, and rested, so your results are comparable.
+- **Judge progress over weeks.** One session is noisy. Watch the last-five average and charts, and re-run the baseline now and then.
+
+The same tips are in the app under **Get the most out of it** on the Home screen.
+
 ## Content
 - 66 excerpts (40 fiction, 26 non-fiction) from Project Gutenberg's most-downloaded titles, each with five comprehension questions.
 - 367 skim & scan questions with evidence sentences.

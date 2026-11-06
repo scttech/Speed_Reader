@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.FitnessCenter
+import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Speed
@@ -48,6 +49,7 @@ internal fun HomeRoute(
     onStartDrills: () -> Unit,
     onStartScan: () -> Unit,
     onOpenProgress: () -> Unit,
+    onOpenTips: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
@@ -59,6 +61,7 @@ internal fun HomeRoute(
         onStartDrills = onStartDrills,
         onStartScan = onStartScan,
         onOpenProgress = onOpenProgress,
+        onOpenTips = onOpenTips,
     )
 }
 
@@ -69,7 +72,7 @@ private data class Module(
     val action: ModuleAction? = null,
 )
 
-private enum class ModuleAction { BASELINE, PRACTICE, DRILLS, SCAN, PROGRESS }
+private enum class ModuleAction { BASELINE, PRACTICE, DRILLS, SCAN, PROGRESS, TIPS }
 
 private val modules = listOf(
     Module("Baseline test", "Measure your effective WPM", Icons.Filled.Speed, ModuleAction.BASELINE),
@@ -77,6 +80,7 @@ private val modules = listOf(
     Module("Practice reading", "Adaptive target speed with quizzes", Icons.AutoMirrored.Filled.MenuBook, ModuleAction.PRACTICE),
     Module("Skim & scan", "Hunt for one fact in a passage", Icons.Filled.FitnessCenter, ModuleAction.SCAN),
     Module("Progress", "Charts, streaks and levels", Icons.Filled.BarChart, ModuleAction.PROGRESS),
+    Module("Get the most out of it", "Tips to improve your reading speed", Icons.Filled.Lightbulb, ModuleAction.TIPS),
 )
 
 @Composable
@@ -88,6 +92,7 @@ internal fun HomeScreen(
     onStartDrills: () -> Unit,
     onStartScan: () -> Unit,
     onOpenProgress: () -> Unit,
+    onOpenTips: () -> Unit = {},
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -120,6 +125,7 @@ internal fun HomeScreen(
                         ModuleAction.DRILLS -> onStartDrills
                         ModuleAction.SCAN -> onStartScan
                         ModuleAction.PROGRESS -> onOpenProgress
+                        ModuleAction.TIPS -> onOpenTips
                         null -> null
                     },
                 )
